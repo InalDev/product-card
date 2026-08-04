@@ -1,0 +1,18 @@
+.products {
+  list-style: none;
+  gap: 45px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products__item {
+  width: 340px;
+  height: 570px;
+  background-color: #f7f7fa;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
