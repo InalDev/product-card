@@ -26,21 +26,19 @@ if (speedPlane > speedOfLight) {
 
 // Задание с товарами
 
-let product = "Телефон"
+let price = 1000;
+let productName = 'Телефон';
 
-let productPrice = 1000
 
-let budget = 1000
-
-let budgetDifference = productPrice - budget
-
-if (productPrice <= budget) {
-  console.log(`${product} приобретен. Спасибо за покупку !`)
-}
-else { productPrice > budget 
-  console.log(`Вам не хватает ${budgetDifference} $, пополните баланс`)
+function productBudget (budget) {
+  if (price <= budget) {
+    console.log('Спасибо за покупку')
+  } else {
+    console.log(`Вам не хватает ${price - budget} $, пополните баланс`)
+  }
 }
 
+productBudget (900)
 
 // Создать 1 функцию и именовать её по своему усмотрению
 
