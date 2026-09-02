@@ -12,15 +12,17 @@ cityWeather (`Бостоне`, 20)
 
 const speedOfLight = 299792458;
 
-let speedPlane = 900;
-
-if (speedPlane > speedOfLight) {
-  console.log('Сверхсветовая скорость')
-} else if (speedPlane === speedOfLight) {
-  console.log('Скорость света')
-} else {
-  console.log('Субсветовая скорость')
+function checkSpeed (speed) {
+  if (speed > speedOfLight) {
+    console.log('Сверхсветовая скорость')
+  } else if (speed === speedOfLight) {
+    console.log('Скорость света')
+  } else {
+    console.log('Субсветовая скорость')
+  }
 }
+
+checkSpeed (309792458)
 
 
 
