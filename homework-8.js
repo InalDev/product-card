@@ -57,13 +57,19 @@ console.log(products)
 
 const games = [
   { 
-    title: "Watch Dogs", year: 2022, genre: "Экшен" 
+    title: "Watch Dogs", 
+    year: 2022, 
+    genre: "Экшен" 
   }, 
   { 
-    title: "HALO 2", year: 2004, genre: "Шутер" 
+    title: "HALO 2", 
+    year: 2004, 
+    genre: "Шутер" 
   },
   { 
-    title: "MINECRAFT", year: 2009, genre: "Песочница" 
+    title: "MINECRAFT", 
+    year: 2009, 
+    genre: "Песочница" 
   }
 ];
 
@@ -77,13 +83,19 @@ const games = [
 
 const freeForPlayGames = [
   { 
-    title: "Fornite", year: 2018, genre: "Королевская битва" 
+    title: "Fornite", 
+    year: 2018, 
+    genre: "Королевская битва" 
   }, 
   { 
-    title: "CS2", year: 2023, genre: "Шутер" 
+    title: "CS2", 
+    year: 2023, 
+    genre: "Шутер" 
   },
   { 
-    title: "Warface", year: 2009, genre: "Шутер"
+    title: "Warface", 
+    year: 2009, 
+    genre: "Шутер"
   }
 ];
 
@@ -95,12 +107,13 @@ console.log(popularGames)
 
 // 8) Метод map
 
-const shooterGames = popularGames.map((game) => {
-  if (game.genre === "Шутер") {
-    return game.title;
+const rareGames = popularGames.map((game) => {
+  if (game.year <= 2009) {
+    game.isRare = true;
   } else {
-    return null;
+    game.isRare = false;
   }
+  return game;
 })
 
-console.log(shooterGames)
+console.log(rareGames)
