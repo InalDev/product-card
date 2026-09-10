@@ -1,3 +1,46 @@
+.clear-list {
+  list-style:none ;
+  padding: 25px;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+ul.purple-text {
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+.price {
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
+
+.compound_name {
+  margin-bottom: 5px;
+}
+
+.compound__list {
+  padding-left: 25px;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
 .products {
   list-style: none;
   gap: 45px;
@@ -15,4 +58,79 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+
+.card {
+  background-color: #f7f7fa; 
+  padding: 25px;
+}
+
+.card__description {
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.card__category {
+  font-size: 12px;
+  line-height: 24px;
+  color: #A5A3B9;
+  margin-bottom: 5px;
+}
+
+.card__compound {
+margin-bottom: 25px;
+color: #515076;
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 27px;
+  color: #515076;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background: #f2efef;
+}
+
+.catalog__container {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-top: 170px;
+}
+
+.catalog__title {
+  margin-bottom: 99px;
+  margin-top: 50px;
+}
+
+.button-green-color {
+  background: #00FF00;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 78px;
+  text-align: center;
+  color: #515076;
 }
