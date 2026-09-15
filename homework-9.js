@@ -2,33 +2,39 @@
 
 const arrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const newNumbersArray = arrayOfNumbers.filter(number => number >= 5);
+const newNumbersArray = arrayOfNumbers.filter((number) => number >= 5);
 
 console.log(newNumbersArray);
 
-// Создать массив строк, относящихся к любой сущности 
-// (название фильмов/книг, кухонные приборы, мебель и т.д.), 
+// Создать массив строк, относящихся к любой сущности
+// (название фильмов/книг, кухонные приборы, мебель и т.д.),
 // проверить, есть ли в массиве какая-то определенная сущность.
 
 const arrayOfItems = ["стол", "стул", "шкаф", "кровать", "диван"];
 
-const isItemInArray = arrayOfItems.filter(item => item === "кровать")
+function isItemInArray(item) {
+  if (typeof item === "string") {
+    return arrayOfItems.includes(item);
+  }
+  return "Неккоректные входные параметры";
+}
 
-console.log(isItemInArray);
+console.log(isItemInArray("кровать"));
+console.log(isItemInArray("футбольный мяч"));
 
-// Написать функцию, которая аргументом будет принимать 
-// массив и изменять его порядок на противоположный ("переворачивать") . 
+// Написать функцию, которая аргументом будет принимать
+// массив и изменять его порядок на противоположный ("переворачивать") .
 // Два вышеуказанных массива с помощью этой функции перевернуть
 
-function arrayReverse (array) {
+function arrayReverse(array) {
   return array.reverse();
 }
 
 arrayReverse(arrayOfNumbers);
 arrayReverse(arrayOfItems);
 
-console .log(arrayOfNumbers);
-console .log(arrayOfItems);
+console.log(arrayOfNumbers);
+console.log(arrayOfItems);
 
 // Импортировать данные из comment.js и вывести в консоль
 
@@ -38,13 +44,15 @@ console.log(commentatorID);
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 
-const commentorMailInclCom = commentatorID.filter(comment => comment.email.includes(".com"));
+const commentorMailInclCom = commentatorID.filter((comment) =>
+  comment.email.includes(".com"),
+);
 
 console.log(commentorMailInclCom);
 
 // Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-const commentorPostId = commentatorID.map(comment => {
+const commentorPostId = commentatorID.map((comment) => {
   if (comment.id <= 5) {
     comment.postId = 2;
   } else {
@@ -57,10 +65,10 @@ console.log(commentorPostId);
 
 // Перебрать массив, что бы объекты состояли только из айди и имени
 
-const commentatorIdAndName = commentatorID.map(comment => {
+const commentatorIdAndName = commentatorID.map((comment) => {
   return {
     id: comment.id,
-    name: comment.name
+    name: comment.name,
   };
 });
 
@@ -68,9 +76,9 @@ console.log(commentatorIdAndName);
 
 // Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
 
-const commentorIsInvalid = commentatorID.map(comment => {
+const commentorIsInvalid = commentatorID.map((comment) => {
   if (comment.body.length > 180) {
-    comment.isInvalid = true; 
+    comment.isInvalid = true;
   } else {
     comment.isInvalid = false;
   }
