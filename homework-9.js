@@ -16,7 +16,7 @@ function isItemInArray(item) {
   if (typeof item === "string") {
     return arrayOfItems.includes(item);
   }
-  return "Неккоректные входные параметры";
+  return "Некорректные входные параметры";
 }
 
 console.log(isItemInArray("кровать"));
