@@ -22,12 +22,6 @@ ul.purple-text {
   margin-bottom: 25px;
 }
 
-.price {
-  font-size: 20px;
-  line-height: 24px;
-  color: #515076;
-}
-
 .compound_name {
   margin-bottom: 5px;
 }
@@ -41,7 +35,7 @@ ul.purple-text {
   margin: 0 auto;
 }
 
-.products {
+#products {
   list-style: none;
   gap: 45px;
   padding: 0;
@@ -102,6 +96,9 @@ color: #515076;
 }
 
 .card__price {
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
   display: flex;
   justify-content: space-between;
   align-items: center;
