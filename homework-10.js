@@ -2,6 +2,7 @@ import { productCards } from './productsData.js';
 
 console.log(productCards);
 
+const PATH = /images/
 const productsTemplate = document.getElementById('product-template');
 const productsList = document.getElementById('products');
 
@@ -20,9 +21,11 @@ function chooseProductCard() {
   }
 }
 
+
+function renderCards(productCards) {
 productCards.forEach(product => {
   const productClone = productsTemplate.content.cloneNode(true);
-  productClone.querySelector('.card__image').src = product.image;
+  productClone.querySelector('.card__image').src = PATH + product.image;
   productClone.querySelector('.card__category').textContent = product.category;
   productClone.querySelector('.card__name').textContent = product.name;
   productClone.querySelector('.card__description').textContent = product.description;
@@ -35,3 +38,6 @@ productCards.forEach(product => {
   });
   productsList.appendChild(productClone);
 });
+}
+
+renderCards(productCards.slice(0, chooseProductCard()))

@@ -1,7 +1,7 @@
 export const productCards = [
   {
     id: 1,
-    image: "images/mousse.jpg",
+    image: "mousse.jpg",
     category: "Для нормальной кожи",
     name: "Увлажняющий мусс",
     description: "Глубоко увлажняет кожу лица оставляя ее мягкой и гладкой",
@@ -16,7 +16,7 @@ export const productCards = [
   },
   {
     id: 2,
-    image: "images/mask.png",
+    image: "mask.png",
     category: "Для нормальной кожи",
     name: "Увлажняющая маска",
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
@@ -31,7 +31,7 @@ export const productCards = [
   },
   {
     id: 3,
-    image: "images/gel.png",
+    image: "gel.png",
     category: "Для нормальной кожи",
     name: "Гель для умывания",
     description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
@@ -46,7 +46,7 @@ export const productCards = [
   },
   {
     id: 4,
-    image: "images/giftsetmini.png",
+    image: "giftsetmini.png",
     category: "Для нормальной кожи",
     name: "Подарочный набор №1",
     description: "Набор, состоящий из увлажняющего крема и маски.",
@@ -61,7 +61,7 @@ export const productCards = [
   },
   {
     id: 5,
-    image: "images/giftsetbig.png",
+    image: "giftsetbig.png",
     category: "Для нормальной кожи",
     name: "Подарочный набор №5",
     description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
