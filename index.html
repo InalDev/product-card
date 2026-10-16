@@ -19,6 +19,7 @@
         <button id="open-google">Открыть страницу Google.com</button>
         <button id="output-console-log">Вывести сообщение в консоль лог</button>
         <button class="button" id="change-button-color-itself">нажми что-бы поменять цвет этой кнопки</button>
+        <button id="openModal">Открыть модальное окно</button>
 
         
          <ul id="products" class="clear-list">
@@ -45,7 +46,54 @@
         </template>
     </ul>
      </div>
+         <footer class="footer">
+    <div class="footer-content">
+      <div class="discription-container">
+        <h2 class="brand-name">Products Card</h2>
+        <p class="discription">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <div class="social-icons">
+          <img src="images/tglogo.png" alt="logo" width="21" height="17,61">
+          <img src="images/vkLogo.png" alt="logo2" width="24" height="14">
+        </div>
+      </div>
+
+      <div class="input-container">
+        <p class="CTA">Подпишись на наши акции:</p>
+        <form class ="form" id="email-form">
+          <input type="email" placeholder="Введите Email" required name="userMail" class="mail-input"> <button class = "sub-button" type="submit">Подписаться</button>
+        </form>
+      </div>
+      
+      <div>
+        <nav class="social-links">
+          <p class="links">Быстрые ссылки</p>
+          <ul>
+            <li class="links-list">Главная</li>
+            <li class="links-list">Магазин</li>
+            <li class="links-list">Контакты</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </footer>
    </main>
+      <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+         <h2 class="modal-title">Окно регистрации</h2>
+         <p class="modal-description">Заполните ваши данные для успешной регистрации</p>
+         <form class="registration" id="registration-form" autocomplete="on">
+          <input type="text" placeholder="Имя" required name="userName" id = form__input class="name-input">
+          <input type="text" placeholder="Фамилия" required name="userLastName" id = form__input class="surname-input">
+          <input type="date" placeholder="Дата рождения" required name="userBirthDate" id = form__input class="birth-date-input">
+          <input type="text" placeholder="Логин" required name="userLogin" id = form__input class="login-input">
+          <input type="password" placeholder="Пароль" required name="userPassword" id = form__input class="password-input">
+          <input type="password" placeholder="Подтвердите пароль" required name="userConfirmPassword" id = form__input class="confirm-password-input">
+          <button class="register-button" type="submit">Зарегистрироваться</button>
+         </form>
+      </div>
+
+  <script src="homework-11.js"></script>
   <script scr = "productsData.js"></script>
   <script type="module" src="homework-10.js"></script>
   <script type="module" src="homework-9.js"></script>
