@@ -15,17 +15,16 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  margin: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 ul.purple-text {
   padding-left: 25px;
   margin-bottom: 25px;
-}
-
-.price {
-  font-size: 20px;
-  line-height: 24px;
-  color: #515076;
 }
 
 .compound_name {
@@ -41,7 +40,7 @@ ul.purple-text {
   margin: 0 auto;
 }
 
-.products {
+#products {
   list-style: none;
   gap: 45px;
   padding: 0;
@@ -102,6 +101,9 @@ color: #515076;
 }
 
 .card__price {
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,4 +135,231 @@ color: #515076;
   line-height: 78px;
   text-align: center;
   color: #515076;
+}
+
+.footer {
+  background-color: #3A3A3Afa;
+  padding-left: 84px;
+  padding-right: 85px;
+  padding-top: 85px;
+  padding-bottom: 28px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links ul {
+  padding-left: 0;
+}
+
+.links-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.links {
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 50px 30px;
+  border-radius: 35px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transform: scale(0.85);
+  transition: transform 0.4s ease;
+  animation: fadeIn 0.4s forwards;
+} 
+
+.modal.show .modal-content {
+  transform: scale(1);
+} 
+
+.close-button {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0,85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal.show {
+  display: flex;
+  pointer-events: auto;
+}
+
+.CTA {
+  font-size: 24px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 13px;
+  list-style: none;
+  white-space: nowrap
+}
+
+#email-form {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding-left: 36px;
+  padding-right: 15px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.sub-button
+{
+  padding: 12px 20px;
+  background-color: #FFFFFF;
+  color: rgb(1, 1, 1);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mail-input {
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-input {
+  width: 477px;
+  height:
+
+
+61px;
+  border: none;
+  padding-left: 36px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-right: 373px;
+}
+
+.discription-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 132px;
+}
+
+.discription {
+  margin-bottom: 42px;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.brand-name {
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+}
+
+#form__input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.register-button {
+  padding: 12px 20px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 24px;
+  line-height: 27px;
+  color: #515076;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.modal-description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #515076;
+  margin-top: 0;
+  margin-bottom: 20px;
 }

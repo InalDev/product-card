@@ -7,15 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="card.css">
-  <link rel="stylesheet" href="catalog.css">
-  <link rel="stylesheet" href="container.css">
-  <link rel="stylesheet" href="title.css">
-  <link rel="stylesheet" href="clear-list.css">
   <link rel="stylesheet" href="products.css">
-  <link rel="stylesheet" href="compound.css">
-  <link rel="stylesheet" href="button.css">
 
 </head>
   <body>
@@ -27,125 +19,83 @@
         <button id="open-google">Открыть страницу Google.com</button>
         <button id="output-console-log">Вывести сообщение в консоль лог</button>
         <button class="button" id="change-button-color-itself">нажми что-бы поменять цвет этой кнопки</button>
+        <button id="openModal">Открыть модальное окно</button>
 
-
-         <ul class="products clear-list">
-          
+        
+         <ul id="products" class="clear-list">
+          <template id="product-template">
            <li class ="products__item card"> 
-            <img class="card__image" src="images/mousse.jpg" alt="Товар увлажняющий мусс">
-            <span class="card__category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-            <h2 class="card__name">Увлажняющий мусс</h2>
-            <p class="card__description">Глубоко увлажняет кожу лица оставляя ее мягкой и гладкой</p>
+            <img class="card__image" src="" alt="" width="290" height="245">
+            <span class="card__category"></span>
+            <h2 class="card__name"></h2>
+            <p class="card__description"></p>
 
             <div class="card__compound compound">
 
               <span class="compound__name">Состав:</span>
  
-              <ul class="compound__list">
-                <li>активные натуральные комплексы</li>
-                <li>витамины С, А, РР, В И Е</li>
-                <li>солнцезащитные компоненты</li>
-              </ul>
-
+              <ul class="compound__list"></ul>
+            
              </div>
 
-          <div class="card__price price">
+          <div class="card__price">
             <b>Цена:</b>
-            <span>2 750 &#8381</span>
+            <span></span>
           </div>
         </li>
-
-
-      <li class ="products__item card"> 
-            <img class="card__image" src="images/mask.png" alt="Товар увлажняющая маска">
-            <span class="card__category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-            <h2 class="card__name">Увлажняющая маска</h2>
-            <p class="card__description">Способствует удерживанию влаги в верхних слоях кожи.</p>
-
-            <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-
-            <ul class="compound__list">
-              <li>Воски</li>
-              <li>Минералы</li>
-              <li>Масла</li>
-            </ul>
-            </div>
-
-          <div class="card__price price">
-            <b>Цена:</b>
-            <span>3 500 &#8381</span>
-          </div>
-        </li>
-
-        <li class ="products__item card"> 
-            <img class="card__image" src="images/gel.png" alt="Товар гель для умывания">
-            <span class="card__category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-            <h2 class="card__name">Гель для умывания</h2>
-            <p class="card__description">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-          <div class="card__compound compound">
-            <span class="compound__name">Состав:</span>
-
-            <ul class="compound__list">
-              <li>Минералы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-          </div>
-          
-          <div class="card__price price">
-            <b>Цена:</b>
-            <span>1 650 &#8381</span>
-          </div>
-        </li>
-
-        <li class ="products__item card"> 
-            <img class="card__image" src="images/giftsetmini.png" alt="Товар подарочный набор мини">
-            <span class="card__category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-            <h2 class="card__name">Подарочный набор №1</h2>
-            <p class="card__description">Набор, состоящий из увлажняющего крема и маски.</p>
-
-            <div class="card__compound compound">
-              <span class="compound__name">Состав:</span>
-
-              <ul class="compound__list">
-                <li>Воски</li>
-                <li>Минералы</li>
-                <li>Масла</li>
-              </ul>
-            </div>
-
-          <div class="card__price price">
-            <b>Цена:</b>
-            <span>4 750 &#8381</span>
-          </div>
-        </li>
-
-        <li class ="products__item card"> 
-            <img class="card__image" src="images/giftsetbig.png" alt="Товар подарочный набор большой">
-            <span class="card__category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-            <h2 class="card__name">Подарочный набор №5</h2>
-            <p class="card__description">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-
-            <div class="card__compound compound">
-              <span class="compound__name">Состав:</span>
-
-              <ul class="compound__list">
-                <li>Воски</li>
-                <li>Минералы</li>
-                <li>Масла</li>
-              </ul>
-            </div>
-
-          <div class="card__price price">
-            <b>Цена:</b>
-            <span class="price">7 520 &#8381</span>
-          </div>
-        </li>
+        </template>
     </ul>
-
      </div>
+         <footer class="footer">
+    <div class="footer-content">
+      <div class="discription-container">
+        <h2 class="brand-name">Products Card</h2>
+        <p class="discription">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <div class="social-icons">
+          <img src="images/tglogo.png" alt="logo" width="21" height="17,61">
+          <img src="images/vkLogo.png" alt="logo2" width="24" height="14">
+        </div>
+      </div>
+
+      <div class="input-container">
+        <p class="CTA">Подпишись на наши акции:</p>
+        <form class ="form" id="email-form">
+          <input type="email" placeholder="Введите Email" required name="userMail" class="mail-input"> <button class = "sub-button" type="submit">Подписаться</button>
+        </form>
+      </div>
+      
+      <div>
+        <nav class="social-links">
+          <p class="links">Быстрые ссылки</p>
+          <ul>
+            <li class="links-list">Главная</li>
+            <li class="links-list">Магазин</li>
+            <li class="links-list">Контакты</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </footer>
    </main>
+      <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+         <h2 class="modal-title">Окно регистрации</h2>
+         <p class="modal-description">Заполните ваши данные для успешной регистрации</p>
+         <form class="registration" id="registration-form" autocomplete="on">
+          <input type="text" placeholder="Имя" required name="userName" id = form__input class="name-input">
+          <input type="text" placeholder="Фамилия" required name="userLastName" id = form__input class="surname-input">
+          <input type="date" placeholder="Дата рождения" required name="userBirthDate" id = form__input class="birth-date-input">
+          <input type="text" placeholder="Логин" required name="userLogin" id = form__input class="login-input">
+          <input type="password" placeholder="Пароль" required name="userPassword" id = form__input class="password-input">
+          <input type="password" placeholder="Подтвердите пароль" required name="userConfirmPassword" id = form__input class="confirm-password-input">
+          <button class="register-button" type="submit">Зарегистрироваться</button>
+         </form>
+      </div>
+
+  <script src="homework-11.js"></script>
+  <script scr = "productsData.js"></script>
+  <script type="module" src="homework-10.js"></script>
   <script type="module" src="homework-9.js"></script>
   <script src="comment.js"></script>
   <script src="homework-8.js"></script>
